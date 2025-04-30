@@ -5,6 +5,7 @@ class SceneGameOver {
     if (spaceKey) SwitchToTitle();
   }
   void draw() {
+    tint(#FFFFFF);
     background(255, 0, 0);
     pushMatrix();
     translate(width/2, height/2 + 75);

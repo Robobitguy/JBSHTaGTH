@@ -1,14 +1,15 @@
 //this program plays an arcade game
 //copyright Aiden Trimble 2024
+//Images used belong to their respective copyright owners
 //CONTROLS
 //A+D - move left/right
 //W - Jump
 //Spacebar - attack
 //POWERUPS
-//RED - restores 1 health
+//PINK - restores 1 health
 //GREEN - upgrades weapon by 1
 //BLUE - 10 seconds of invincibility
-//if health or weapon is maxxed out, it gives the opposite effect, if both are maxxed out, gives the invincibility.
+//if health or weapon is maxxed out, it gives the opposite effect, if both are maxxed out, gives invincibility.
 
 float dt;
 float prevTime = 0;
@@ -24,14 +25,16 @@ boolean leftPressed, pLeftPressed;
 //PICTURES
 PImage TitleBG;
 PImage GameOverBG;
+PImage IBackground;
 //MISC
 
 void setup() {
   size(800, 600);
-  SwitchToGameOver();
+  SwitchToTitle();
   noStroke();
   TitleBG = loadImage("Joe.jpg");
   GameOverBG = loadImage("Joever.jpg");
+  IBackground = loadImage("Background.png");
 }
 
 void draw() {

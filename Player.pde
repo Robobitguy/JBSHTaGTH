@@ -13,7 +13,8 @@ class Player {
   float weaponLength;
   int weaponLevel = 0;
   float radius;
-
+  PImage IPlayer;
+  
   Player() {
     position = new PVector();
     speed = new PVector();
@@ -22,6 +23,7 @@ class Player {
     speed.x = 300;
     speed.y = 0;
     radius = size/2;
+    IPlayer = loadImage("JoePlayer.png");
   }
   void update() {
     CalcWeaponPosition();
@@ -59,9 +61,9 @@ class Player {
   }
   void draw() {
     pushMatrix();
-    if (iFrameCD > 0) fill (0, 0, 255, 100);
-    else fill(0, 0, 255);
-    rect(position.x, position.y, size, size * 1.5);
+    if (iFrameCD > 0) tint(#90F3FF);
+    else tint(#FFFFFF);
+    image(IPlayer,position.x,position.y);
     popMatrix();
   }
   void CalcWeaponPosition() {
@@ -75,6 +77,6 @@ class Player {
   void TakeDamage() {
     iFrameCD = 3;
     health--;
-    weaponLevel = 0;
+    if (weaponLevel > 0) weaponLevel--;
   }
 }

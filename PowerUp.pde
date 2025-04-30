@@ -17,7 +17,7 @@ class PowerUp {
   }
   void draw() {
     if (powerupType == 1) {
-      fill(255, 0, 0);
+      fill(#FF9599);
     } else if (powerupType == 2) {
       fill(0, 255, 0);
     } else if (powerupType == 3) {

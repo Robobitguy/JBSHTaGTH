@@ -17,9 +17,11 @@ class ScenePlay {
   float level = 0;
   float xpBarMax;
   //MISC
+  
 
   ScenePlay() {
     player =  new Player();
+    
   }
   void update() {
     //SPAWN
@@ -130,6 +132,8 @@ class ScenePlay {
   }
   void draw() {
     background (198, 80, 0);
+    tint(#FFFFFF);
+    image (IBackground, 0, 0);
     //ITEMS
     fill(255, 132, 0);
     rect(0, height-100, width, 100);
